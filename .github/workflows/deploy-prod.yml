@@ -1,0 +1,146 @@
+name: CI/CD - ETL Ventas Malls (PROD)
+
+# Despliega los notebooks de proceso/ al workspace de PRODUCCIÓN,
+# crea/actualiza el workflow de Databricks y lo ejecuta.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "proceso/**"
+      - ".github/workflows/**"
+  workflow_dispatch: {}
+
+env:
+  # ---- Ajusta estos valores a tus recursos ----
+  STORAGE_NAME: adlsmallsdata          # Storage Account ADLS Gen2
+  CATALOGO: catalog_prod               # Catálogo de producción
+  CREDENCIAL: cred_mi_malls            # Storage Credential (Access Connector / Managed Identity)
+  CLUSTER_NAME: cluster_prod_malls     # ÚNICO cluster encendido (en prod)
+  WORKFLOW_NAME: WF_PROD_ETL_VENTAS_MALLS
+  DEST_BASE: /Shared/ventas_malls/proceso
+  GRUPO_INGENIEROS: data_engineers
+  GRUPO_ANALISTAS: analistas_malls
+
+jobs:
+  deploy-and-run:
+    runs-on: ubuntu-latest
+    env:
+      DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_PROD }}
+      DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_PROD }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validar secrets
+        run: |
+          if [ -z "$DATABRICKS_HOST" ] || [ -z "$DATABRICKS_TOKEN" ]; then
+            echo "Faltan los secrets DATABRICKS_HOST_PROD / DATABRICKS_TOKEN_PROD"; exit 1
+          fi
+          echo "Destino: $DATABRICKS_HOST"
+
+      - name: Desplegar notebooks de proceso/
+        run: |
+          api() { curl -sS -H "Authorization: Bearer $DATABRICKS_TOKEN" "$@"; }
+
+          api -X POST "$DATABRICKS_HOST/api/2.0/workspace/mkdirs" \
+              -H "Content-Type: application/json" -d "{\"path\": \"$DEST_BASE\"}" > /dev/null
+
+          for file in proceso/*.py; do
+            name=$(basename "$file" .py)
+            echo "Importando $file -> $DEST_BASE/$name"
+            resp=$(api -X POST "$DATABRICKS_HOST/api/2.0/workspace/import" \
+              -F "path=$DEST_BASE/$name" -F "format=SOURCE" -F "language=PYTHON" \
+              -F "overwrite=true" -F "content=@$file")
+            if echo "$resp" | jq -e '.error_code' > /dev/null 2>&1; then
+              echo "Error importando $name: $resp"; exit 1
+            fi
+          done
+
+      - name: Obtener cluster de producción
+        run: |
+          CLUSTER_ID=$(curl -sS -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+            "$DATABRICKS_HOST/api/2.0/clusters/list" \
+            | jq -r --arg n "$CLUSTER_NAME" '.clusters[]? | select(.cluster_name == $n) | .cluster_id' | head -1)
+          if [ -z "$CLUSTER_ID" ]; then echo "No existe el cluster $CLUSTER_NAME"; exit 1; fi
+          echo "Cluster $CLUSTER_NAME -> $CLUSTER_ID"
+          echo "CLUSTER_ID=$CLUSTER_ID" >> "$GITHUB_ENV"
+
+      - name: Construir definición del workflow
+        run: |
+          # task(key, notebook, depends_csv, params_json)
+          task() {
+            jq -n --arg k "$1" --arg nb "$DEST_BASE/$2" --arg dep "$3" --argjson p "$4" --arg c "$CLUSTER_ID" '{
+              task_key: $k,
+              notebook_task: {notebook_path: $nb, source: "WORKSPACE", base_parameters: $p},
+              existing_cluster_id: $c,
+              timeout_seconds: 3600,
+              max_retries: 1,
+              min_retry_interval_millis: 60000
+            } + (if $dep == "" then {} else {depends_on: ($dep | split(",") | map({task_key: .}))} end)'
+          }
+
+          ING=$(jq -n --arg s "$STORAGE_NAME" --arg c "$CATALOGO" '{storageName:$s, container:"raw", catalogo:$c, esquema:"bronze"}')
+
+          TASKS=$(jq -s '.' \
+            <(task preparacion_ambiente 1.Preparacion_Ambiente "" \
+                "$(jq -n --arg s "$STORAGE_NAME" --arg c "$CATALOGO" --arg cr "$CREDENCIAL" '{storageName:$s, catalogo:$c, credencial:$cr}')") \
+            <(task ingest_centros_comerciales 2.Ingest_Centros_Comerciales preparacion_ambiente "$ING") \
+            <(task ingest_tiendas 2.Ingest_Tiendas preparacion_ambiente "$ING") \
+            <(task ingest_ventas 2.Ingest_Ventas preparacion_ambiente "$ING") \
+            <(task ingest_afluencia 2.Ingest_Afluencia preparacion_ambiente "$ING") \
+            <(task transform 3.Transform ingest_centros_comerciales,ingest_tiendas,ingest_ventas,ingest_afluencia \
+                "$(jq -n --arg c "$CATALOGO" '{catalogo:$c, esquema_source:"bronze", esquema_sink:"silver"}')") \
+            <(task load 4.Load transform \
+                "$(jq -n --arg c "$CATALOGO" '{catalogo:$c, esquema_source:"silver", esquema_sink:"golden"}')") \
+            <(task grants 5.Grants_Medallion load \
+                "$(jq -n --arg c "$CATALOGO" --arg i "$GRUPO_INGENIEROS" --arg a "$GRUPO_ANALISTAS" '{catalogo:$c, grupoIngenieros:$i, grupoAnalistas:$a}')"))
+
+          jq -n --arg name "$WORKFLOW_NAME" --argjson tasks "$TASKS" '{
+            name: $name,
+            tasks: $tasks,
+            max_concurrent_runs: 1,
+            timeout_seconds: 7200,
+            schedule: {quartz_cron_expression: "0 0 7 * * ?", timezone_id: "America/Lima", pause_status: "PAUSED"},
+            tags: {environment: "production", project: "ventas_malls", created_by: "github_actions"}
+          }' > job.json
+          jq '.tasks[] | {task_key, depends_on}' job.json
+
+      - name: Crear o actualizar workflow
+        run: |
+          api() { curl -sS -H "Authorization: Bearer $DATABRICKS_TOKEN" -H "Content-Type: application/json" "$@"; }
+
+          JOB_ID=$(api "$DATABRICKS_HOST/api/2.1/jobs/list?name=$WORKFLOW_NAME" | jq -r '.jobs[0].job_id // empty')
+
+          if [ -n "$JOB_ID" ]; then
+            echo "Actualizando workflow existente $JOB_ID"
+            jq --argjson id "$JOB_ID" '{job_id: $id, new_settings: .}' job.json > reset.json
+            api -X POST "$DATABRICKS_HOST/api/2.1/jobs/reset" -d @reset.json
+          else
+            echo "Creando workflow $WORKFLOW_NAME"
+            JOB_ID=$(api -X POST "$DATABRICKS_HOST/api/2.1/jobs/create" -d @job.json | jq -r '.job_id')
+          fi
+          [ -z "$JOB_ID" ] || [ "$JOB_ID" = "null" ] && { echo "No se pudo crear el workflow"; exit 1; }
+          echo "JOB_ID=$JOB_ID" >> "$GITHUB_ENV"
+
+      - name: Ejecutar workflow y esperar resultado
+        run: |
+          api() { curl -sS -H "Authorization: Bearer $DATABRICKS_TOKEN" -H "Content-Type: application/json" "$@"; }
+
+          RUN_ID=$(api -X POST "$DATABRICKS_HOST/api/2.1/jobs/run-now" -d "{\"job_id\": $JOB_ID}" | jq -r '.run_id')
+          echo "Run: $DATABRICKS_HOST/#job/$JOB_ID/run/$RUN_ID"
+
+          for i in $(seq 1 90); do          # hasta 45 min
+            RUN=$(api "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID")
+            STATE=$(echo "$RUN" | jq -r '.state.life_cycle_state')
+            RESULT=$(echo "$RUN" | jq -r '.state.result_state // "-"')
+            echo "[$i] $STATE / $RESULT"
+            echo "$RUN" | jq -r '.tasks[]? | "    \(.task_key): \(.state.life_cycle_state) \(.state.result_state // "")"'
+            case "$STATE" in
+              TERMINATED|SKIPPED|INTERNAL_ERROR)
+                [ "$RESULT" = "SUCCESS" ] && { echo "Workflow OK"; exit 0; }
+                echo "Workflow falló: $(echo "$RUN" | jq -r '.state.state_message')"; exit 1 ;;
+            esac
+            sleep 30
+          done
+          echo "Timeout esperando el workflow"; exit 1

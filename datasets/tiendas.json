@@ -1,0 +1,1514 @@
+[
+ {
+  "id_tienda": 101,
+  "nombre_tienda": "Saga Falabella",
+  "rubro": "Moda",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2021-07-09"
+ },
+ {
+  "id_tienda": 102,
+  "nombre_tienda": "Forever 21",
+  "rubro": "Moda",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2021-08-12"
+ },
+ {
+  "id_tienda": 103,
+  "nombre_tienda": "Zara",
+  "rubro": "Moda",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2018-03-31"
+ },
+ {
+  "id_tienda": 104,
+  "nombre_tienda": "Oechsle",
+  "rubro": "Moda",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2005-09-02"
+ },
+ {
+  "id_tienda": 105,
+  "nombre_tienda": "Samsung Store",
+  "rubro": "Tecnologia",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2005-08-06"
+ },
+ {
+  "id_tienda": 106,
+  "nombre_tienda": "Movistar",
+  "rubro": "Tecnologia",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2021-01-22"
+ },
+ {
+  "id_tienda": 107,
+  "nombre_tienda": "La Lucha",
+  "rubro": "Alimentos",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2011-03-29"
+ },
+ {
+  "id_tienda": 108,
+  "nombre_tienda": "Tanta",
+  "rubro": "Alimentos",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2008-07-31"
+ },
+ {
+  "id_tienda": 109,
+  "nombre_tienda": "Pardos Chicken",
+  "rubro": "Alimentos",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2012-08-19"
+ },
+ {
+  "id_tienda": 110,
+  "nombre_tienda": "KFC",
+  "rubro": "Alimentos",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2009-10-30"
+ },
+ {
+  "id_tienda": 111,
+  "nombre_tienda": "Plaza Vea",
+  "rubro": "Supermercado",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 120,
+  "fecha_apertura": "2012-09-18"
+ },
+ {
+  "id_tienda": 112,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2005-12-22"
+ },
+ {
+  "id_tienda": 113,
+  "nombre_tienda": "Tottus",
+  "rubro": "Supermercado",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2017-01-10"
+ },
+ {
+  "id_tienda": 114,
+  "nombre_tienda": "Sodimac",
+  "rubro": "Hogar",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2019-02-06"
+ },
+ {
+  "id_tienda": 115,
+  "nombre_tienda": "Promart",
+  "rubro": "Hogar",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2013-02-10"
+ },
+ {
+  "id_tienda": 116,
+  "nombre_tienda": "Cineplanet",
+  "rubro": "Entretenimiento",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2022-05-04"
+ },
+ {
+  "id_tienda": 117,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2010-03-23"
+ },
+ {
+  "id_tienda": 118,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2011-03-28"
+ },
+ {
+  "id_tienda": 119,
+  "nombre_tienda": "Sephora",
+  "rubro": "Salud y Belleza",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2020-01-13"
+ },
+ {
+  "id_tienda": 120,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 1500,
+  "fecha_apertura": "2020-05-01"
+ },
+ {
+  "id_tienda": 121,
+  "nombre_tienda": "Mifarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2018-08-31"
+ },
+ {
+  "id_tienda": 122,
+  "nombre_tienda": "Adidas",
+  "rubro": "Deportes",
+  "id_mall": 1,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2011-01-21"
+ },
+ {
+  "id_tienda": 123,
+  "nombre_tienda": "Marathon",
+  "rubro": "Deportes",
+  "id_mall": 1,
+  "piso": 3,
+  "area_m2": 1500,
+  "fecha_apertura": "2017-06-29"
+ },
+ {
+  "id_tienda": 124,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2012-04-10"
+ },
+ {
+  "id_tienda": 125,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 1,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2005-09-20"
+ },
+ {
+  "id_tienda": 126,
+  "nombre_tienda": "H&M",
+  "rubro": "Moda",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2021-02-07"
+ },
+ {
+  "id_tienda": 127,
+  "nombre_tienda": "Zara",
+  "rubro": "Moda",
+  "id_mall": 2,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2019-09-14"
+ },
+ {
+  "id_tienda": 128,
+  "nombre_tienda": "Saga Falabella",
+  "rubro": "Moda",
+  "id_mall": 2,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2019-06-03"
+ },
+ {
+  "id_tienda": 129,
+  "nombre_tienda": "Samsung Store",
+  "rubro": "Tecnologia",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2017-08-04"
+ },
+ {
+  "id_tienda": 130,
+  "nombre_tienda": "Hiraoka",
+  "rubro": "Tecnologia",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2021-10-03"
+ },
+ {
+  "id_tienda": 131,
+  "nombre_tienda": "iShop",
+  "rubro": "Tecnologia",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2018-02-02"
+ },
+ {
+  "id_tienda": 132,
+  "nombre_tienda": "Starbucks",
+  "rubro": "Alimentos",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2007-01-15"
+ },
+ {
+  "id_tienda": 133,
+  "nombre_tienda": "Bembos",
+  "rubro": "Alimentos",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2007-06-18"
+ },
+ {
+  "id_tienda": 134,
+  "nombre_tienda": "Tanta",
+  "rubro": "Alimentos",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2008-08-03"
+ },
+ {
+  "id_tienda": 135,
+  "nombre_tienda": "Tottus",
+  "rubro": "Supermercado",
+  "id_mall": 2,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2015-07-02"
+ },
+ {
+  "id_tienda": 136,
+  "nombre_tienda": "Plaza Vea",
+  "rubro": "Supermercado",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2017-05-30"
+ },
+ {
+  "id_tienda": 137,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2021-03-02"
+ },
+ {
+  "id_tienda": 138,
+  "nombre_tienda": "Casaideas",
+  "rubro": "Hogar",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2007-07-03"
+ },
+ {
+  "id_tienda": 139,
+  "nombre_tienda": "Sodimac",
+  "rubro": "Hogar",
+  "id_mall": 2,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2008-07-19"
+ },
+ {
+  "id_tienda": 140,
+  "nombre_tienda": "Cineplanet",
+  "rubro": "Entretenimiento",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2019-01-10"
+ },
+ {
+  "id_tienda": 141,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 2,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2019-05-02"
+ },
+ {
+  "id_tienda": 142,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2009-06-18"
+ },
+ {
+  "id_tienda": 143,
+  "nombre_tienda": "Sephora",
+  "rubro": "Salud y Belleza",
+  "id_mall": 2,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2016-11-23"
+ },
+ {
+  "id_tienda": 144,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2012-04-09"
+ },
+ {
+  "id_tienda": 145,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 2,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2006-04-20"
+ },
+ {
+  "id_tienda": 146,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2006-10-08"
+ },
+ {
+  "id_tienda": 147,
+  "nombre_tienda": "Adidas",
+  "rubro": "Deportes",
+  "id_mall": 2,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2015-11-26"
+ },
+ {
+  "id_tienda": 148,
+  "nombre_tienda": "Oechsle",
+  "rubro": "Moda",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2015-08-30"
+ },
+ {
+  "id_tienda": 149,
+  "nombre_tienda": "Ripley",
+  "rubro": "Moda",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2010-12-12"
+ },
+ {
+  "id_tienda": 150,
+  "nombre_tienda": "Movistar",
+  "rubro": "Tecnologia",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2013-12-13"
+ },
+ {
+  "id_tienda": 151,
+  "nombre_tienda": "Claro",
+  "rubro": "Tecnologia",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 1500,
+  "fecha_apertura": "2013-05-18"
+ },
+ {
+  "id_tienda": 152,
+  "nombre_tienda": "iShop",
+  "rubro": "Tecnologia",
+  "id_mall": 3,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2015-02-16"
+ },
+ {
+  "id_tienda": 153,
+  "nombre_tienda": "Hiraoka",
+  "rubro": "Tecnologia",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2010-01-15"
+ },
+ {
+  "id_tienda": 154,
+  "nombre_tienda": "Starbucks",
+  "rubro": "Alimentos",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2010-03-01"
+ },
+ {
+  "id_tienda": 155,
+  "nombre_tienda": "KFC",
+  "rubro": "Alimentos",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2005-02-28"
+ },
+ {
+  "id_tienda": 156,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2005-09-15"
+ },
+ {
+  "id_tienda": 157,
+  "nombre_tienda": "Plaza Vea",
+  "rubro": "Supermercado",
+  "id_mall": 3,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2016-07-13"
+ },
+ {
+  "id_tienda": 158,
+  "nombre_tienda": "Sodimac",
+  "rubro": "Hogar",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2007-12-20"
+ },
+ {
+  "id_tienda": 159,
+  "nombre_tienda": "Casaideas",
+  "rubro": "Hogar",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2017-12-04"
+ },
+ {
+  "id_tienda": 160,
+  "nombre_tienda": "Cineplanet",
+  "rubro": "Entretenimiento",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2007-03-06"
+ },
+ {
+  "id_tienda": 161,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2012-12-12"
+ },
+ {
+  "id_tienda": 162,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 3,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2015-06-23"
+ },
+ {
+  "id_tienda": 163,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 3,
+  "piso": 2,
+  "area_m2": 1500,
+  "fecha_apertura": "2012-08-11"
+ },
+ {
+  "id_tienda": 164,
+  "nombre_tienda": "Sephora",
+  "rubro": "Salud y Belleza",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2009-04-19"
+ },
+ {
+  "id_tienda": 165,
+  "nombre_tienda": "Natura",
+  "rubro": "Salud y Belleza",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2015-01-24"
+ },
+ {
+  "id_tienda": 166,
+  "nombre_tienda": "Mifarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2009-02-12"
+ },
+ {
+  "id_tienda": 167,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 3,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2017-05-06"
+ },
+ {
+  "id_tienda": 168,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 3,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2019-08-18"
+ },
+ {
+  "id_tienda": 169,
+  "nombre_tienda": "Marathon",
+  "rubro": "Deportes",
+  "id_mall": 3,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2005-05-01"
+ },
+ {
+  "id_tienda": 170,
+  "nombre_tienda": "Ripley",
+  "rubro": "Moda",
+  "id_mall": 4,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2015-10-19"
+ },
+ {
+  "id_tienda": 171,
+  "nombre_tienda": "Forever 21",
+  "rubro": "Moda",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2013-12-30"
+ },
+ {
+  "id_tienda": 172,
+  "nombre_tienda": "Samsung Store",
+  "rubro": "Tecnologia",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2010-12-13"
+ },
+ {
+  "id_tienda": 173,
+  "nombre_tienda": "Claro",
+  "rubro": "Tecnologia",
+  "id_mall": 4,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2014-06-28"
+ },
+ {
+  "id_tienda": 174,
+  "nombre_tienda": "La Lucha",
+  "rubro": "Alimentos",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 120,
+  "fecha_apertura": "2009-11-19"
+ },
+ {
+  "id_tienda": 175,
+  "nombre_tienda": "Tanta",
+  "rubro": "Alimentos",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2021-07-03"
+ },
+ {
+  "id_tienda": 176,
+  "nombre_tienda": "Pardos Chicken",
+  "rubro": "Alimentos",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2021-10-11"
+ },
+ {
+  "id_tienda": 177,
+  "nombre_tienda": "KFC",
+  "rubro": "Alimentos",
+  "id_mall": 4,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2006-02-15"
+ },
+ {
+  "id_tienda": 178,
+  "nombre_tienda": "Tottus",
+  "rubro": "Supermercado",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2009-03-03"
+ },
+ {
+  "id_tienda": 179,
+  "nombre_tienda": "Plaza Vea",
+  "rubro": "Supermercado",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 600,
+  "fecha_apertura": "2006-07-11"
+ },
+ {
+  "id_tienda": 180,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2010-04-11"
+ },
+ {
+  "id_tienda": 181,
+  "nombre_tienda": "Promart",
+  "rubro": "Hogar",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2014-05-28"
+ },
+ {
+  "id_tienda": 182,
+  "nombre_tienda": "Casaideas",
+  "rubro": "Hogar",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2017-09-05"
+ },
+ {
+  "id_tienda": 183,
+  "nombre_tienda": "Sodimac",
+  "rubro": "Hogar",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2010-11-07"
+ },
+ {
+  "id_tienda": 184,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 120,
+  "fecha_apertura": "2013-11-17"
+ },
+ {
+  "id_tienda": 185,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2019-06-24"
+ },
+ {
+  "id_tienda": 186,
+  "nombre_tienda": "Natura",
+  "rubro": "Salud y Belleza",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2018-12-07"
+ },
+ {
+  "id_tienda": 187,
+  "nombre_tienda": "Mifarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2006-08-24"
+ },
+ {
+  "id_tienda": 188,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2016-05-07"
+ },
+ {
+  "id_tienda": 189,
+  "nombre_tienda": "Adidas",
+  "rubro": "Deportes",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 120,
+  "fecha_apertura": "2011-05-24"
+ },
+ {
+  "id_tienda": 190,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 4,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2017-03-09"
+ },
+ {
+  "id_tienda": 191,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 4,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2018-09-20"
+ },
+ {
+  "id_tienda": 192,
+  "nombre_tienda": "Oechsle",
+  "rubro": "Moda",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2010-12-07"
+ },
+ {
+  "id_tienda": 193,
+  "nombre_tienda": "Saga Falabella",
+  "rubro": "Moda",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2021-08-26"
+ },
+ {
+  "id_tienda": 194,
+  "nombre_tienda": "Zara",
+  "rubro": "Moda",
+  "id_mall": 5,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2011-02-10"
+ },
+ {
+  "id_tienda": 195,
+  "nombre_tienda": "H&M",
+  "rubro": "Moda",
+  "id_mall": 5,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2009-09-22"
+ },
+ {
+  "id_tienda": 196,
+  "nombre_tienda": "Hiraoka",
+  "rubro": "Tecnologia",
+  "id_mall": 5,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2010-08-20"
+ },
+ {
+  "id_tienda": 197,
+  "nombre_tienda": "Samsung Store",
+  "rubro": "Tecnologia",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2019-03-25"
+ },
+ {
+  "id_tienda": 198,
+  "nombre_tienda": "Movistar",
+  "rubro": "Tecnologia",
+  "id_mall": 5,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2011-03-17"
+ },
+ {
+  "id_tienda": 199,
+  "nombre_tienda": "Claro",
+  "rubro": "Tecnologia",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2012-06-25"
+ },
+ {
+  "id_tienda": 200,
+  "nombre_tienda": "La Lucha",
+  "rubro": "Alimentos",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2014-11-29"
+ },
+ {
+  "id_tienda": 201,
+  "nombre_tienda": "Starbucks",
+  "rubro": "Alimentos",
+  "id_mall": 5,
+  "piso": 3,
+  "area_m2": 1500,
+  "fecha_apertura": "2014-08-05"
+ },
+ {
+  "id_tienda": 202,
+  "nombre_tienda": "Plaza Vea",
+  "rubro": "Supermercado",
+  "id_mall": 5,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2017-03-28"
+ },
+ {
+  "id_tienda": 203,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2013-04-13"
+ },
+ {
+  "id_tienda": 204,
+  "nombre_tienda": "Tottus",
+  "rubro": "Supermercado",
+  "id_mall": 5,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2008-04-28"
+ },
+ {
+  "id_tienda": 205,
+  "nombre_tienda": "Promart",
+  "rubro": "Hogar",
+  "id_mall": 5,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2005-11-23"
+ },
+ {
+  "id_tienda": 206,
+  "nombre_tienda": "Casaideas",
+  "rubro": "Hogar",
+  "id_mall": 5,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2020-04-19"
+ },
+ {
+  "id_tienda": 207,
+  "nombre_tienda": "Sodimac",
+  "rubro": "Hogar",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2007-04-23"
+ },
+ {
+  "id_tienda": 208,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2008-08-24"
+ },
+ {
+  "id_tienda": 209,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2005-07-23"
+ },
+ {
+  "id_tienda": 210,
+  "nombre_tienda": "Cineplanet",
+  "rubro": "Entretenimiento",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2012-06-14"
+ },
+ {
+  "id_tienda": 211,
+  "nombre_tienda": "Mifarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 5,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2013-07-31"
+ },
+ {
+  "id_tienda": 212,
+  "nombre_tienda": "Natura",
+  "rubro": "Salud y Belleza",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2015-07-23"
+ },
+ {
+  "id_tienda": 213,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2015-04-29"
+ },
+ {
+  "id_tienda": 214,
+  "nombre_tienda": "Marathon",
+  "rubro": "Deportes",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2009-05-02"
+ },
+ {
+  "id_tienda": 215,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 5,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2011-04-02"
+ },
+ {
+  "id_tienda": 216,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 5,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2011-04-06"
+ },
+ {
+  "id_tienda": 217,
+  "nombre_tienda": "Forever 21",
+  "rubro": "Moda",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2017-01-10"
+ },
+ {
+  "id_tienda": 218,
+  "nombre_tienda": "Oechsle",
+  "rubro": "Moda",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2007-08-03"
+ },
+ {
+  "id_tienda": 219,
+  "nombre_tienda": "H&M",
+  "rubro": "Moda",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2018-01-09"
+ },
+ {
+  "id_tienda": 220,
+  "nombre_tienda": "iShop",
+  "rubro": "Tecnologia",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2021-05-05"
+ },
+ {
+  "id_tienda": 221,
+  "nombre_tienda": "Movistar",
+  "rubro": "Tecnologia",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2018-08-07"
+ },
+ {
+  "id_tienda": 222,
+  "nombre_tienda": "Hiraoka",
+  "rubro": "Tecnologia",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 40,
+  "fecha_apertura": "2013-08-22"
+ },
+ {
+  "id_tienda": 223,
+  "nombre_tienda": "Bembos",
+  "rubro": "Alimentos",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2016-08-30"
+ },
+ {
+  "id_tienda": 224,
+  "nombre_tienda": "Starbucks",
+  "rubro": "Alimentos",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 1500,
+  "fecha_apertura": "2021-02-19"
+ },
+ {
+  "id_tienda": 225,
+  "nombre_tienda": "KFC",
+  "rubro": "Alimentos",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 1500,
+  "fecha_apertura": "2020-01-16"
+ },
+ {
+  "id_tienda": 226,
+  "nombre_tienda": "Tanta",
+  "rubro": "Alimentos",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 120,
+  "fecha_apertura": "2014-09-04"
+ },
+ {
+  "id_tienda": 227,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 120,
+  "fecha_apertura": "2019-11-18"
+ },
+ {
+  "id_tienda": 228,
+  "nombre_tienda": "Tottus",
+  "rubro": "Supermercado",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2011-09-27"
+ },
+ {
+  "id_tienda": 229,
+  "nombre_tienda": "Sodimac",
+  "rubro": "Hogar",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 1500,
+  "fecha_apertura": "2011-08-20"
+ },
+ {
+  "id_tienda": 230,
+  "nombre_tienda": "Casaideas",
+  "rubro": "Hogar",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2009-04-21"
+ },
+ {
+  "id_tienda": 231,
+  "nombre_tienda": "Promart",
+  "rubro": "Hogar",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 1500,
+  "fecha_apertura": "2013-07-03"
+ },
+ {
+  "id_tienda": 232,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2005-01-04"
+ },
+ {
+  "id_tienda": 233,
+  "nombre_tienda": "Cineplanet",
+  "rubro": "Entretenimiento",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2009-09-18"
+ },
+ {
+  "id_tienda": 234,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2018-01-04"
+ },
+ {
+  "id_tienda": 235,
+  "nombre_tienda": "Sephora",
+  "rubro": "Salud y Belleza",
+  "id_mall": 6,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2016-06-19"
+ },
+ {
+  "id_tienda": 236,
+  "nombre_tienda": "Mifarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2021-07-04"
+ },
+ {
+  "id_tienda": 237,
+  "nombre_tienda": "Natura",
+  "rubro": "Salud y Belleza",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2006-11-26"
+ },
+ {
+  "id_tienda": 238,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 6,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2019-11-22"
+ },
+ {
+  "id_tienda": 239,
+  "nombre_tienda": "Marathon",
+  "rubro": "Deportes",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2009-06-20"
+ },
+ {
+  "id_tienda": 240,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 40,
+  "fecha_apertura": "2006-01-14"
+ },
+ {
+  "id_tienda": 241,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2018-09-17"
+ },
+ {
+  "id_tienda": 242,
+  "nombre_tienda": "Adidas",
+  "rubro": "Deportes",
+  "id_mall": 6,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2014-04-19"
+ },
+ {
+  "id_tienda": 243,
+  "nombre_tienda": "Oechsle",
+  "rubro": "Moda",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2008-04-23"
+ },
+ {
+  "id_tienda": 244,
+  "nombre_tienda": "Ripley",
+  "rubro": "Moda",
+  "id_mall": 7,
+  "piso": 3,
+  "area_m2": 1500,
+  "fecha_apertura": "2005-02-15"
+ },
+ {
+  "id_tienda": 245,
+  "nombre_tienda": "H&M",
+  "rubro": "Moda",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2014-07-15"
+ },
+ {
+  "id_tienda": 246,
+  "nombre_tienda": "Forever 21",
+  "rubro": "Moda",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 80,
+  "fecha_apertura": "2020-08-10"
+ },
+ {
+  "id_tienda": 247,
+  "nombre_tienda": "Claro",
+  "rubro": "Tecnologia",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2007-12-29"
+ },
+ {
+  "id_tienda": 248,
+  "nombre_tienda": "iShop",
+  "rubro": "Tecnologia",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 1500,
+  "fecha_apertura": "2016-11-30"
+ },
+ {
+  "id_tienda": 249,
+  "nombre_tienda": "Hiraoka",
+  "rubro": "Tecnologia",
+  "id_mall": 7,
+  "piso": 3,
+  "area_m2": 600,
+  "fecha_apertura": "2012-02-13"
+ },
+ {
+  "id_tienda": 250,
+  "nombre_tienda": "Movistar",
+  "rubro": "Tecnologia",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2021-02-18"
+ },
+ {
+  "id_tienda": 251,
+  "nombre_tienda": "Pardos Chicken",
+  "rubro": "Alimentos",
+  "id_mall": 7,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2015-08-25"
+ },
+ {
+  "id_tienda": 252,
+  "nombre_tienda": "Tanta",
+  "rubro": "Alimentos",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2021-11-11"
+ },
+ {
+  "id_tienda": 253,
+  "nombre_tienda": "La Lucha",
+  "rubro": "Alimentos",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 4000,
+  "fecha_apertura": "2019-04-21"
+ },
+ {
+  "id_tienda": 254,
+  "nombre_tienda": "KFC",
+  "rubro": "Alimentos",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2022-06-11"
+ },
+ {
+  "id_tienda": 255,
+  "nombre_tienda": "Tottus",
+  "rubro": "Supermercado",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2021-01-02"
+ },
+ {
+  "id_tienda": 256,
+  "nombre_tienda": "Plaza Vea",
+  "rubro": "Supermercado",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 80,
+  "fecha_apertura": "2011-02-04"
+ },
+ {
+  "id_tienda": 257,
+  "nombre_tienda": "Wong",
+  "rubro": "Supermercado",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2017-02-11"
+ },
+ {
+  "id_tienda": 258,
+  "nombre_tienda": "Promart",
+  "rubro": "Hogar",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 250,
+  "fecha_apertura": "2020-07-25"
+ },
+ {
+  "id_tienda": 259,
+  "nombre_tienda": "Casaideas",
+  "rubro": "Hogar",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 1500,
+  "fecha_apertura": "2009-10-19"
+ },
+ {
+  "id_tienda": 260,
+  "nombre_tienda": "Cinemark",
+  "rubro": "Entretenimiento",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 600,
+  "fecha_apertura": "2015-06-14"
+ },
+ {
+  "id_tienda": 261,
+  "nombre_tienda": "Coney Park",
+  "rubro": "Entretenimiento",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 40,
+  "fecha_apertura": "2009-08-22"
+ },
+ {
+  "id_tienda": 262,
+  "nombre_tienda": "Natura",
+  "rubro": "Salud y Belleza",
+  "id_mall": 7,
+  "piso": 3,
+  "area_m2": 250,
+  "fecha_apertura": "2015-09-13"
+ },
+ {
+  "id_tienda": 263,
+  "nombre_tienda": "Sephora",
+  "rubro": "Salud y Belleza",
+  "id_mall": 7,
+  "piso": 1,
+  "area_m2": 120,
+  "fecha_apertura": "2011-09-13"
+ },
+ {
+  "id_tienda": 264,
+  "nombre_tienda": "Inkafarma",
+  "rubro": "Salud y Belleza",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 4000,
+  "fecha_apertura": "2014-05-26"
+ },
+ {
+  "id_tienda": 265,
+  "nombre_tienda": "Adidas",
+  "rubro": "Deportes",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 250,
+  "fecha_apertura": "2005-08-26"
+ },
+ {
+  "id_tienda": 266,
+  "nombre_tienda": "Platanitos",
+  "rubro": "Deportes",
+  "id_mall": 7,
+  "piso": 2,
+  "area_m2": 120,
+  "fecha_apertura": "2020-01-02"
+ },
+ {
+  "id_tienda": 267,
+  "nombre_tienda": "Nike",
+  "rubro": "Deportes",
+  "id_mall": 7,
+  "piso": 3,
+  "area_m2": 4000,
+  "fecha_apertura": "2014-01-26"
+ },
+ {
+  "id_tienda": 268,
+  "nombre_tienda": "Marathon",
+  "rubro": "Deportes",
+  "id_mall": 7,
+  "piso": 3,
+  "area_m2": 80,
+  "fecha_apertura": "2015-06-26"
+ }
+]
