@@ -101,16 +101,18 @@ df_bronze = spark.table(f"{src}.ventas")
 total_bronze = df_bronze.count()
 
 # 1) Tipado + normalización de texto + fecha en 2 formatos posibles
+#    Databricks trabaja en modo ANSI: cast/to_date fallan ante un valor inválido.
+#    try_cast / try_to_date devuelven NULL y la regla de calidad (paso 2) descarta la fila.
 df_v = (df_bronze
-        .withColumn("id_venta", col("id_venta").cast("bigint"))
-        .withColumn("id_tienda", col("id_tienda").cast("int"))
-        .withColumn("id_mall", col("id_mall").cast("int"))
-        .withColumn("cantidad", col("cantidad").cast("int"))
-        .withColumn("monto_soles", F.round(col("monto_soles").cast("double"), 2))
+        .withColumn("id_venta", F.expr("try_cast(id_venta AS BIGINT)"))
+        .withColumn("id_tienda", F.expr("try_cast(id_tienda AS INT)"))
+        .withColumn("id_mall", F.expr("try_cast(id_mall AS INT)"))
+        .withColumn("cantidad", F.expr("try_cast(cantidad AS INT)"))
+        .withColumn("monto_soles", F.round(F.expr("try_cast(monto_soles AS DOUBLE)"), 2))
         .withColumn("medio_pago", initcap(trim(col("medio_pago"))))
         .withColumn("categoria", trim(col("categoria")))
-        .withColumn("fecha_venta", F.coalesce(F.to_date("fecha_venta", "yyyy-MM-dd"),
-                                              F.to_date("fecha_venta", "dd/MM/yyyy"))))
+        .withColumn("fecha_venta", F.coalesce(F.expr("try_to_date(fecha_venta, 'yyyy-MM-dd')"),
+                                              F.expr("try_to_date(fecha_venta, 'dd/MM/yyyy')"))))
 
 # 2) Reglas de calidad
 df_v = df_v.filter(col("id_venta").isNotNull()
