@@ -1,0 +1,475 @@
+{
+  "datasets": [
+    {
+      "name": "f0588671",
+      "displayName": "KPIs generales",
+      "queryLines": [
+        "SELECT\r\n",
+        "  ROUND(SUM(total_ventas), 0)                       AS ventas_totales_soles,\r\n",
+        "  SUM(num_tickets)                                  AS tickets,\r\n",
+        "  ROUND(SUM(total_ventas) / SUM(num_tickets), 2)    AS ticket_promedio\r\n",
+        "FROM catalog_prod.golden.ventas_mensuales_mall;"
+      ]
+    },
+    {
+      "name": "ce998108",
+      "displayName": "Ventas mensuales por mall",
+      "queryLines": [
+        "SELECT make_date(anio, mes, 1) AS periodo, nombre_mall, operador,\r\n",
+        "       total_ventas, num_tickets, ticket_promedio, crecimiento_vs_mes_anterior_pct\r\n",
+        "FROM catalog_prod.golden.ventas_mensuales_mall\r\n",
+        "ORDER BY periodo, nombre_mall;"
+      ]
+    },
+    {
+      "name": "abb2ec19",
+      "displayName": "Top 5 tiendas por mall",
+      "queryLines": [
+        "SELECT nombre_mall, ranking_en_mall, nombre_tienda, rubro, total_ventas, participacion_mall_pct\r\n",
+        "FROM catalog_prod.golden.ranking_tiendas\r\n",
+        "WHERE ranking_en_mall <= 5\r\n",
+        "ORDER BY nombre_mall, ranking_en_mall;"
+      ]
+    },
+    {
+      "name": "e4ed9a2d",
+      "displayName": "Conversión visitantes",
+      "queryLines": [
+        "SELECT nombre_mall, es_fin_de_semana,\r\n",
+        "       SUM(visitantes)                                        AS visitantes,\r\n",
+        "       SUM(num_tickets)                                       AS tickets,\r\n",
+        "       ROUND(SUM(num_tickets) / SUM(visitantes) * 100, 2)     AS tasa_conversion_pct,\r\n",
+        "       ROUND(SUM(total_ventas) / SUM(visitantes), 2)          AS venta_por_visitante\r\n",
+        "FROM catalog_prod.golden.conversion_diaria_mall\r\n",
+        "GROUP BY nombre_mall, es_fin_de_semana;"
+      ]
+    },
+    {
+      "name": "ca37abdc",
+      "displayName": "Medio de pago por rubro",
+      "queryLines": [
+        "SELECT rubro, medio_pago, monto\r\n",
+        "FROM catalog_prod.golden.ventas_rubro_medio_pago\r\n",
+        "UNPIVOT (monto FOR medio_pago IN (efectivo, plin, tarjeta_credito, tarjeta_debito, yape))\r\n",
+        "ORDER BY rubro;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "9b2d5c9d",
+      "displayName": "Detalle",
+      "layout": [
+        {
+          "widget": {
+            "name": "kpi_ventas",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f0588671",
+                  "fields": [
+                    {
+                      "name": "sum(ventas_totales_soles)",
+                      "expression": "SUM(`ventas_totales_soles`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Ventas totales (S/)"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(ventas_totales_soles)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_tickets",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f0588671",
+                  "fields": [
+                    {
+                      "name": "sum(tickets)",
+                      "expression": "SUM(`tickets`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Tickets"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(tickets)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 0,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_ticket_prom",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f0588671",
+                  "fields": [
+                    {
+                      "name": "avg(ticket_promedio)",
+                      "expression": "AVG(`ticket_promedio`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Ticket promedio (S/)"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(ticket_promedio)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 0,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "ventas_mensuales",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ce998108",
+                  "fields": [
+                    {
+                      "name": "nombre_mall",
+                      "expression": "`nombre_mall`"
+                    },
+                    {
+                      "name": "monthly(periodo)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `periodo`)"
+                    },
+                    {
+                      "name": "sum(total_ventas)",
+                      "expression": "SUM(`total_ventas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Ventas mensuales por mall"
+              },
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(periodo)",
+                  "displayName": "Month",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_ventas)",
+                  "displayName": "total_ventas",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "nombre_mall",
+                  "displayName": "nombre_mall",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 12,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "top_tiendas",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "abb2ec19",
+                  "fields": [
+                    {
+                      "name": "nombre_mall",
+                      "expression": "`nombre_mall`"
+                    },
+                    {
+                      "name": "nombre_tienda",
+                      "expression": "`nombre_tienda`"
+                    },
+                    {
+                      "name": "sum(total_ventas)",
+                      "expression": "SUM(`total_ventas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Top 5 tiendas por mall"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "nombre_tienda",
+                  "displayName": "nombre_tienda",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_ventas)",
+                  "displayName": "total_ventas",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "nombre_mall",
+                  "displayName": "nombre_mall",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 10,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "conversion",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "e4ed9a2d",
+                  "fields": [
+                    {
+                      "name": "es_fin_de_semana",
+                      "expression": "`es_fin_de_semana`"
+                    },
+                    {
+                      "name": "nombre_mall",
+                      "expression": "`nombre_mall`"
+                    },
+                    {
+                      "name": "avg(tasa_conversion_pct)",
+                      "expression": "AVG(`tasa_conversion_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Tasa de conversión por mall"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "nombre_mall",
+                  "displayName": "nombre_mall",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(tasa_conversion_pct)",
+                  "displayName": "tasa_conversion_pct",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "es_fin_de_semana",
+                  "displayName": "es_fin_de_semana",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 10,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "medio_pago",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ca37abdc",
+                  "fields": [
+                    {
+                      "name": "medio_pago",
+                      "expression": "`medio_pago`"
+                    },
+                    {
+                      "name": "rubro",
+                      "expression": "`rubro`"
+                    },
+                    {
+                      "name": "sum(monto)",
+                      "expression": "SUM(`monto`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Medio de pago por rubro"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "rubro",
+                  "displayName": "rubro",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(monto)",
+                  "displayName": "monto",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "medio_pago",
+                  "displayName": "medio_pago",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 12,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
