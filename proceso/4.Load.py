@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 4. Load – Silver ➜ Golden
 # MAGIC Tablas de negocio para el dashboard:

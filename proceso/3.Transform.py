@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 3. Transform – Bronze ➜ Silver
 # MAGIC * Limpieza: nulos, negativos, duplicados, espacios y mayúsculas inconsistentes, fechas en dos formatos.
@@ -111,8 +115,8 @@ df_v = (df_bronze
         .withColumn("monto_soles", F.round(F.expr("try_cast(monto_soles AS DOUBLE)"), 2))
         .withColumn("medio_pago", initcap(trim(col("medio_pago"))))
         .withColumn("categoria", trim(col("categoria")))
-        .withColumn("fecha_venta", F.coalesce(F.expr("try_to_date(fecha_venta, 'yyyy-MM-dd')"),
-                                              F.expr("try_to_date(fecha_venta, 'dd/MM/yyyy')"))))
+        .withColumn("fecha_venta", F.coalesce(F.expr("to_date(try_to_timestamp(fecha_venta, 'yyyy-MM-dd'))"),
+                                              F.expr("to_date(try_to_timestamp(fecha_venta, 'dd/MM/yyyy'))"))))
 
 # 2) Reglas de calidad
 df_v = df_v.filter(col("id_venta").isNotNull()

@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 2. Ingesta Bronze – Centros comerciales (CSV)
 # MAGIC Fuente: `raw/maestros/centros_comerciales.csv` en ADLS (acceso vía External Location / Managed Identity).
@@ -6,7 +10,7 @@
 # COMMAND ----------
 
 dbutils.widgets.removeAll()
-dbutils.widgets.text("storageName", "adlsmallsdata")
+dbutils.widgets.text("storageName", "adlsmallsjohn")
 dbutils.widgets.text("container", "raw")
 dbutils.widgets.text("catalogo", "catalog_dev")
 dbutils.widgets.text("esquema", "bronze")

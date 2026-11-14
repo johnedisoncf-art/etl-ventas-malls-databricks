@@ -14,7 +14,7 @@
 
 dbutils.widgets.removeAll()
 
-dbutils.widgets.text("storageName", "adlsmallsdata")
+dbutils.widgets.text("storageName", "adlsmallsjohn")
 dbutils.widgets.text("catalogo", "catalog_dev")
 dbutils.widgets.text("credencial", "cred_mi_malls")
 

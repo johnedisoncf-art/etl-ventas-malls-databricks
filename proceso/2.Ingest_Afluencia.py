@@ -6,7 +6,7 @@
 # COMMAND ----------
 
 dbutils.widgets.removeAll()
-dbutils.widgets.text("storageName", "adlsmallsdata")
+dbutils.widgets.text("storageName", "adlsmallsjohn")
 dbutils.widgets.text("container", "raw")
 dbutils.widgets.text("catalogo", "catalog_dev")
 dbutils.widgets.text("esquema", "bronze")

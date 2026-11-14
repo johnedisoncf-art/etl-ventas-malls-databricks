@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 2. Ingesta Bronze – Ventas (Auto Loader incremental)
 # MAGIC Fuente: `raw/ventas/*.csv`. Se usa **Auto Loader** (`cloudFiles`) con `trigger(availableNow=True)`:
@@ -8,7 +12,7 @@
 # COMMAND ----------
 
 dbutils.widgets.removeAll()
-dbutils.widgets.text("storageName", "adlsmallsdata")
+dbutils.widgets.text("storageName", "adlsmallsjohn")
 dbutils.widgets.text("container", "raw")
 dbutils.widgets.text("catalogo", "catalog_dev")
 dbutils.widgets.text("esquema", "bronze")
