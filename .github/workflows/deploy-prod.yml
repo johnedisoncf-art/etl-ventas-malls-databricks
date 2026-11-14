@@ -12,10 +12,10 @@ on:
 
 env:
   # ---- Ajusta estos valores a tus recursos ----
-  STORAGE_NAME: adlsmallsdata          # Storage Account ADLS Gen2
+  STORAGE_NAME: adlsmallsjohn          # Storage Account ADLS Gen2
   CATALOGO: catalog_prod               # Catálogo de producción
   CREDENCIAL: cred_mi_malls            # Storage Credential (Access Connector / Managed Identity)
-  CLUSTER_NAME: cluster_prod_malls     # ÚNICO cluster encendido (en prod)
+  CLUSTER_NAME: cluster_prod_malls     
   WORKFLOW_NAME: WF_PROD_ETL_VENTAS_MALLS
   DEST_BASE: /Shared/ventas_malls/proceso
   GRUPO_INGENIEROS: data_engineers
