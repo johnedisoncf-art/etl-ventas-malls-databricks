@@ -65,6 +65,7 @@ flowchart LR
 
 ```
 ├── .github/workflows/deploy-prod.yml   # CI/CD: despliega proceso/, crea y ejecuta el workflow
+├── PrepAmb/Preparacion_Ambiente_Dev.py # preparación/reinicio del ambiente DEV (manual)
 ├── proceso/                            # ÚNICOS notebooks que se despliegan y ejecutan en PROD
 │   ├── 1.Preparacion_Ambiente.py       # External locations, catálogo, esquemas, DDL
 │   ├── 2.Ingest_Centros_Comerciales.py
@@ -121,7 +122,23 @@ Dashboard **Ventas Centros Comerciales** sobre `catalog_prod.golden`:
 - Tasa de conversión visitantes → compras (semana vs fin de semana)
 - Medios de pago por rubro
 
-Consultas en [`dashboard/consultas_dashboard.sql`](dashboard/consultas_dashboard.sql). Capturas en `evidencias/`.
+Consultas en [`dashboard/consultas_dashboard.sql`](dashboard/consultas_dashboard.sql).
+
+---
+
+## 📸 Evidencias
+
+| # | Evidencia | Captura |
+|---|---|---|
+| 1 | Grupo de recursos (ADLS, Access Connector, workspaces dev y prod) | ![](evidencias/01_resource_group.png) |
+| 2 | Contenedores ADLS y carpetas de `raw` | ![](evidencias/02_adls_contenedores.png) |
+| 3 | Rol *Storage Blob Data Contributor* al Access Connector | ![](evidencias/03_rol_managed_identity.png) |
+| 4 | Storage Credential (Managed Identity) y External Locations | ![](evidencias/04_credential_external_locations.png) |
+| 5 | `catalog_prod` con esquemas y tablas | ![](evidencias/05_catalogo_prod.png) |
+| 6 | Workflow en producción ejecutado OK | ![](evidencias/06_workflow_prod.png) |
+| 7 | GitHub Actions OK | ![](evidencias/07_github_actions.png) |
+| 8 | Ingesta incremental (Auto Loader) | ![](evidencias/08_autoloader_incremental.png) |
+| 9 | Dashboard | ![](evidencias/09_dashboard.png) |
 
 ---
 
