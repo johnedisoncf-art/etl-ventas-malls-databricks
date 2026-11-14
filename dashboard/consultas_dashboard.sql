@@ -1,9 +1,3 @@
--- =====================================================================
--- Consultas para el Databricks AI/BI Dashboard "Ventas Centros Comerciales"
--- Catálogo: catalog_prod  |  Esquema: golden
--- Cada bloque es un dataset del dashboard (Dashboards > Create > Data).
--- =====================================================================
-
 -- 1) KPIs generales (widgets "Counter")
 SELECT
   ROUND(SUM(total_ventas), 0)                       AS ventas_totales_soles,
