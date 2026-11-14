@@ -11,7 +11,6 @@ on:
   workflow_dispatch: {}
 
 env:
-  # ---- Ajusta estos valores a tus recursos ----
   STORAGE_NAME: adlsmallsjohn          # Storage Account ADLS Gen2
   CATALOGO: catalog_prod               # Catálogo de producción
   CREDENCIAL: cred_mi_malls            # Storage Credential (Access Connector / Managed Identity)
